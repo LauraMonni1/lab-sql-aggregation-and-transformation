@@ -2,7 +2,7 @@ USE sakila;
 
 -- ==================================================================================================================================
 -- CHALLENGE 1
--- =======================================================================
+-- ==================================================================================================================================
 -- 1. You need to use SQL built-in functions to gain insights relating to the duration of movies:
 --     1.1 Determine the shortest and longest movie durations and name the values as max_duration and min_duration.
 
@@ -15,7 +15,7 @@ FLOOR(avg(length)) AS hours,
 FLOOR((avg(length) - FLOOR(avg(length)))*60) AS minutes 
 FROM sakila.film;
 
--- =======================================================================
+
 -- 2. You need to gain insights related to rental dates:
 --    2.1 Calculate the number of days that the company has been operating.
 
@@ -43,7 +43,7 @@ ELSE 'Workday'
 END AS 'DAY_TYPE'
 FROM sakila.rental;
 
--- =======================================================================
+
 /*
 3. You need to ensure that customers can easily access information about the movie collection. 
 To achieve this, retrieve the film titles and their rental duration. 
@@ -55,9 +55,9 @@ Hint: Look for the IFNULL() function.
 */
 SELECT title, IFNULL(rental_duration, 'Not Available') AS 'Rental duration' FROM sakila.film;
 
--- =============================================================================================================================================================
--- CHALLANGE 2
--- =======================================================================
+-- ==================================================================================================================================
+-- CHALLENGE 2
+-- ==================================================================================================================================
 
 -- 1. Next, you need to analyze the films in the collection to gain some more insights. Using the film table, determine:
 --    1.1 The total number of films that have been released.
